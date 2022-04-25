@@ -2,7 +2,7 @@
   "name": "self-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://randomguy1234.github.io/self-portfolio",
+  "homepage": "http://randomguy1234.github.io/pro-portfolio-react",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
