@@ -1,12 +1,24 @@
 import React from "react";
-import Header from "./header";
-import Footer from "../Footer/footer";
+//import {capFirstLetter} from '../../utils/helpers';
 
 function Contact()
 {
+  //const {currentOption}= props;
     return (
-        <section>
-          <Header></Header>
+        <main>
+            <h2>Contact</h2>
+            <p>Below is my contact information.</p>
+            <p>email address: michael.brown.pgrad@gmail.com  phone number: 914-309-0594</p>
+            
+
+        </main>
+    );
+}
+
+//<p>{currentOption.message}</p>
+
+/** might need this later
+ * <Header></Header>
           
           <h1>Contact</h1>
           <form id="contact">
@@ -24,10 +36,8 @@ function Contact()
             </div>
             <button type="submit">Submit</button>
           </form>
+ * @returns 
+ */
 
-          <Footer></Footer>
-        </section>
-    );
-}
 
 export default Contact;

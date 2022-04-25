@@ -1,34 +1,46 @@
 import React from 'react';
-//import About from '../Header/about';
-//import Contact from '../Header/contact';
-
-const handleClick = (item) => {
-    console.log(item);
-    return item;
-  };
+import {capFirstLetter} from '../../utils/helpers';
+import About from './about';
+//import Contact from './contact';
+//import Project from '../Project/project';
+//import Resume from './resume';
 
 //need to add actual navigation
-function Nav()
+function Navigation(props)
 {
+    const {
+        navOptions= [],
+        setCurrectOption,
+        currentOption
+    } = props;
+
+    
+
     return (
-        <nav className='flex flex-wrap justify-around'>
-            <a href='#about-me' onClick={() => handleClick('About Me')}>
-                <h2>About Me</h2>
-            </a>
-
-            <a href='#project.js' onClick={() => handleClick('Portfolio')}>
-                <h2>Portfolio</h2>
-            </a>
-
-            <a href='#contact' onClick={() => handleClick('Contact')}>
-                <h2>Contact</h2>
-            </a>
-
-            <a href='#resume' onClick={() => handleClick('Resume')}>
-                <h2>Resume</h2>
-            </a>
-        </nav>
+        <div>
+            <nav className='flex flex-wrap justify-around'>
+            
+                {navOptions.map((option) => (
+                    <h2 className={`${currentOption.name === option.name && 'selected'}`}
+                        key={option.name} onClick={() => 
+                        {setCurrectOption(option)}}>
+                                {capFirstLetter(option.name)}    
+                        </h2>
+                ))}
+            </nav>
+            <main>
+                    <About currentOption= {currentOption}></About>
+                    
+            </main>
+        </div>
     );
+
 }
 
-export default Nav;
+export default Navigation;
+
+/**
+ * <Contact></Contact>
+                    <Project></Project>
+                    <Resume></Resume>
+ */
