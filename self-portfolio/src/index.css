@@ -33,3 +33,15 @@ code {
 .selected{
   color: var(--madder-lake);
 }
+
+.banner{
+  background-image: url('../src/assets/images/android-image.png');
+}
+
+.github{
+  background-image: url('../src/assets/images/GitHub-icon.png');
+}
+
+.linkedin{
+  background-image: url('../src/assets/images/Linkedin-icon.png');
+}
