@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS HEX */
+:root{
+  --violet-color-wheel: #7e00f5ff;
+  --sonic-silver: #7a7a7aff;
+  --bistre: #2b2118ff;
+  --violet-blue: #3d43a4ff;
+  --madder-lake: #c13336ff;
+}
+
+html{
+  background-color: var(--bistre);
+  color: var(--violet-blue);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.selected{
+  color: var(--madder-lake);
+}
+
+.banner{
+  background-image: url('../src/assets/images/android-image.png');
+}
+
+.github{
+  background-image: url('../src/assets/images/GitHub-icon.png');
+}
+
+.linkedin{
+  background-image: url('../src/assets/images/Linkedin-icon.png');
+}
