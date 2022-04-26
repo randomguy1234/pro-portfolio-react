@@ -1,16 +1,16 @@
 import React from "react";
-//import {capFirstLetter} from '../../utils/helpers';
+import {capFirstLetter} from '../../utils/helpers';
 
-function Resume()
+function Resume(props)
 {
     //create array here for skills
 
-    //const {currentOption}= props;
+    const {currentOption}= props;
     return (
         <div>
             
-            <h2>Resume</h2>
-            <p>Here is a list of some of the skills that I have.</p>
+            <h2>{capFirstLetter(currentOption.name)}</h2>
+            <p>{currentOption.content}</p>
 
             {/** find a way to add this to navigation*/}
             <ul>
@@ -20,7 +20,7 @@ function Resume()
                 <li>Node.js</li>
                 <li>Express.js</li>
                 <li>SQL</li>
-                <li>NoSQL</li>
+                <li>MongoDB</li>
                 <li>PWA</li>
             </ul>
         </div>

@@ -1,19 +1,20 @@
 import React from "react";
-//import {capFirstLetter} from '../../utils/helpers';
+import {capFirstLetter} from '../../utils/helpers';
 
-function Contact()
+function Contact(props)
 {
-  //const {currentOption}= props;
+  const {currentOption}= props;
     return (
         <main>
-            <h2>Contact</h2>
+            <h2>{capFirstLetter(currentOption.name)}</h2>
             <p>Below is my contact information.</p>
-            <p>email address: michael.brown.pgrad@gmail.com  phone number: 914-309-0594</p>
-            
+            <p>{currentOption.content}</p>
 
         </main>
     );
 }
+
+export default Contact;
 
 //<p>{currentOption.message}</p>
 
@@ -38,6 +39,3 @@ function Contact()
           </form>
  * @returns 
  */
-
-
-export default Contact;

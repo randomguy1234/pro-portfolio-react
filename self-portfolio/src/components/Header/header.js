@@ -10,13 +10,17 @@ function Header()
         +' first time in my life. Now I have a degree in computer science and' 
         +' have acquired some experience with various technologies. I am excited'
         +' about what software I will build next.'},
-        {name: 'contact', content: 'email address: michael.brown.pgrad@gmail.com'
-        +' phone number: 914-309-0594'},
+        {name: 'contact', content: ['email address: michael.brown.pgrad@gmail.com '
+        ,'phone number: 914-309-0594 ']},
         {name: 'portfolio', content: 'Here is the list of some of my projects.'},
         {name: 'resume', content: 'Here is a list of some of the skills that I have.'}
     ]);
 
+    //create states for nav movement
     const [currentOption, setCurrectOption] = useState(navOptions[0]);
+
+    //create state for displaying about, consider changing name
+    //const [displayAbout, setDisplayAbout]= useState(false);
 
     return (
         <div>
@@ -26,7 +30,7 @@ function Header()
             <Navigation
                 navOptions= {navOptions}
                 setCurrectOption= {setCurrectOption}
-                currentOption= {currentOption}
+                currentOption= {currentOption}                
             >
 
             </Navigation>
@@ -36,3 +40,8 @@ function Header()
 }
 
 export default Header;
+
+/**
+ * displayAbout= {displayAbout}
+                setDisplayAbout= {setDisplayAbout}
+ */
