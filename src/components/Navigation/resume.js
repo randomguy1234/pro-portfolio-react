@@ -4,6 +4,9 @@ import {capFirstLetter} from '../../utils/helpers';
 function Resume(props)
 {
     //create array here for skills
+    const skillList= ['HTML', 'CSS', 'Javascript', 'APIs', 'Node.js', 'Express', 'SQL', 
+        'MongoDB', 'PWA', 'React'];
+    const subtitle= 'Here is a list of some of the skills that I have.';    
 
     const {currentOption}= props;
     return (
