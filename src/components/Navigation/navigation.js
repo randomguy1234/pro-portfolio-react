@@ -5,12 +5,13 @@ import Contact from './contact';
 import Project from '../Project/project';
 import Resume from './resume';
 
+
 function Navigation(props)
 {
     const {
         navOptions= [],
-        setCurrectOption,
-        currentOption
+        setCurrectOption, currentOption,
+        setDisplayText, displayText
     } = props;
 
     
@@ -28,10 +29,27 @@ function Navigation(props)
                 ))}
             </nav>
             <main>
-                    <About currentOption= {currentOption}></About>
-                    <Contact currentOption= {currentOption}></Contact>
-                    <Project currentOption= {currentOption}></Project>
-                    <Resume currentOption= {currentOption}></Resume>
+                    <About 
+                        displayText= {displayText}
+                        currentOption= {currentOption}
+                        onClick= {() => 
+                            {setDisplayText(true);}}
+                        ></About>
+                    
+                    <Contact
+                        onClick= {() => 
+                            {setDisplayText(false);}}
+                        ></Contact>
+                    
+                    <Project
+                        onClick= {() => 
+                            {setDisplayText(false);}}
+                        ></Project>
+
+                    <Resume
+                        onClick= {() => 
+                            {setDisplayText(false);}}
+                        ></Resume>
 
                     
             </main>

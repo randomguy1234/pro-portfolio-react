@@ -1,36 +1,39 @@
 import React, {useState} from 'react';
 import Navigation from '../Navigation/navigation';
+import android from '../../assets/images/android-image.png';
 
 
 function Header()
 {
     const [navOptions]= useState([
-        {name: 'about', content: 'I loved technology ever since I was a kid. Fast forward to the' 
-        +' beginning of college and I was exposed to programming for the' 
-        +' first time in my life. Now I have a degree in computer science and' 
-        +' have acquired some experience with various technologies. I am excited'
-        +' about what software I will build next.'},
-        {name: 'contact', content: ['email address: michael.brown.pgrad@gmail.com '
-        ,'phone number: 914-309-0594 ']},
-        {name: 'portfolio', content: 'Here is the list of some of my projects.'},
-        {name: 'resume', content: 'Here is a list of some of the skills that I have.'}
+        {name: 'about', subtutle: 'How did I get here?'},
+        {name: 'contact', subtitle: 'Below is my contact information.'},
+        {name: 'portfolio', subtitle: 'Welcome to my project collection.'},
+        {name: 'resume', subtitle: 'Are you interested in my skillset?'}
     ]);
+
 
     //create states for nav movement
     const [currentOption, setCurrectOption] = useState(navOptions[0]);
+    const [displayText, setDisplayText]= useState(true);
 
     //create state for displaying about, consider changing name
     //const [displayAbout, setDisplayAbout]= useState(false);
 
     return (
         <div>
+            <div className='bg-cover bg-center'>
+                <img src={android} alt=''></img>
+            </div>
             <a href='/'>
                 <h1>Michael Brown</h1>
             </a>
             <Navigation
                 navOptions= {navOptions}
                 setCurrectOption= {setCurrectOption}
-                currentOption= {currentOption}                
+                currentOption= {currentOption}
+                displayText= {displayText}
+                setDisplayText= {setDisplayText}                
             >
 
             </Navigation>

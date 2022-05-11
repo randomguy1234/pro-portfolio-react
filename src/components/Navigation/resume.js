@@ -6,16 +6,18 @@ function Resume(props)
     //create array here for skills
     const skillList= ['HTML', 'CSS', 'Javascript', 'APIs', 'Node.js', 'Express', 'SQL', 
         'MongoDB', 'PWA', 'React'];
-    const subtitle= 'Here is a list of some of the skills that I have.';    
+    const mainText= 'Here is a list of some of the technologies that I have used before.';    
 
     const {currentOption}= props;
     return (
         <div>
             
             <h2>{capFirstLetter(currentOption.name)}</h2>
-            <p>{currentOption.content}</p>
+            <p>{currentOption.subtitle}</p>
 
-            {/** find a way to add this to navigation*/}
+            
+            <p>{mainText}</p>
+            {/** convert this into loop for array*/}
             <ul>
                 <li>HTML</li>
                 <li>CSS</li>
