@@ -6,7 +6,7 @@ import android from '../../assets/images/android-image.png';
 function Header()
 {
     const [navOptions]= useState([
-        {name: 'about', subtutle: 'How did I get here?'},
+        {name: 'about', subtitle: 'How did I get here?'},
         {name: 'contact', subtitle: 'Below is my contact information.'},
         {name: 'portfolio', subtitle: 'Welcome to my project collection.'},
         {name: 'resume', subtitle: 'Are you interested in my skillset?'}
@@ -15,15 +15,15 @@ function Header()
 
     //create states for nav movement
     const [currentOption, setCurrectOption] = useState(navOptions[0]);
-    const [displayText, setDisplayText]= useState(true);
+    //const [displayText, setDisplayText]= useState(true);
 
     //create state for displaying about, consider changing name
     //const [displayAbout, setDisplayAbout]= useState(false);
 
     return (
-        <div>
-            <div className='bg-cover bg-center'>
-                <img src={android} alt=''></img>
+        <div className='bg-cover box-border'>
+            <div className='bg-cover box-border'>
+                <img src={android} alt='andriod-banner'></img>
             </div>
             <a href='/'>
                 <h1>Michael Brown</h1>
@@ -31,9 +31,7 @@ function Header()
             <Navigation
                 navOptions= {navOptions}
                 setCurrectOption= {setCurrectOption}
-                currentOption= {currentOption}
-                displayText= {displayText}
-                setDisplayText= {setDisplayText}                
+                currentOption= {currentOption}               
             >
 
             </Navigation>

@@ -4,16 +4,25 @@ import {capFirstLetter} from '../../utils/helpers';
 function Contact(props)
 {
 
-  const mainText= ['email address: michael.brown.pgrad@gmail.com '
-  ,'phone number: 914-309-0594 '];
+  const contactInfo= ['email address: michael.brown.pgrad@gmail.com '
+  ,'phone number: 914-309-0594 ']
+  const mainText= 'If you need to contact me for any reason, please use any of the info below (or use my github/linkedin).';
   
   const {currentOption}= props;
     return (
         <main>
             <h2>{capFirstLetter(currentOption.name)}</h2>
             <p>{currentOption.subtitle}</p>
+            <br /><br />
             <p>{mainText}</p>
+            <br />
 
+            <ul>
+              {contactInfo.map((info) => 
+              (
+                <li>{info}</li>
+              ))}
+            </ul>
         </main>
     );
 }

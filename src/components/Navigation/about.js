@@ -18,6 +18,7 @@ function About(props)
             
             <h2>{capFirstLetter(currentOption.name)}</h2>
             <p>{currentOption.subtitle}</p>
+            <br/><br/>
             <p>{mainText}</p>
             
             

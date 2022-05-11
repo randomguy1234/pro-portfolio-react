@@ -14,19 +14,13 @@ function Resume(props)
             
             <h2>{capFirstLetter(currentOption.name)}</h2>
             <p>{currentOption.subtitle}</p>
+            <br /><br />
 
-            
             <p>{mainText}</p>
-            {/** convert this into loop for array*/}
+            <br />
+            
             <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Javascript</li>
-                <li>Node.js</li>
-                <li>Express.js</li>
-                <li>SQL</li>
-                <li>MongoDB</li>
-                <li>PWA</li>
+                {skillList.map((skill) => <li>{skill}</li >) }
             </ul>
         </div>
     );

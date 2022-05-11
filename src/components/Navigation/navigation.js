@@ -11,7 +11,6 @@ function Navigation(props)
     const {
         navOptions= [],
         setCurrectOption, currentOption,
-        setDisplayText, displayText
     } = props;
 
     
@@ -30,25 +29,19 @@ function Navigation(props)
             </nav>
             <main>
                     <About 
-                        displayText= {displayText}
                         currentOption= {currentOption}
-                        onClick= {() => 
-                            {setDisplayText(true);}}
                         ></About>
                     
                     <Contact
-                        onClick= {() => 
-                            {setDisplayText(false);}}
+                    currentOption= {currentOption}
                         ></Contact>
                     
                     <Project
-                        onClick= {() => 
-                            {setDisplayText(false);}}
+                    currentOption= {currentOption}
                         ></Project>
 
                     <Resume
-                        onClick= {() => 
-                            {setDisplayText(false);}}
+                    currentOption= {currentOption}
                         ></Resume>
 
                     
