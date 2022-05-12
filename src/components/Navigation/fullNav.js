@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { capFirstLetter } from "../../utils/helpers";
 import website from '../../assets/images/run-buddy-snapshot.png';
 import generator from '../../assets/images/password-generator-screenshot.png';
@@ -11,13 +11,13 @@ import Contact from './contact';
 import Project from '../Project/project';
 import Resume from './resume';*/
 
-
+//tried to get main branch results with info from display branch and failed
 function FullNav(props)
 {
-    const {currentOption} = props;
+    const {currentOption}= props;
 
-    const contactInfo= ['email address: michael.brown.pgrad@gmail.com '
-  ,'phone number: 914-309-0594 '];
+    const contactInfo= ['email address: michael.brown.pgrad@gmail.com ',
+        'phone number: 914-309-0594 '];
 
     //arrays for deployed projects
     const links= [
@@ -35,33 +35,34 @@ function FullNav(props)
     const skillList= ['HTML', 'CSS', 'Javascript', 'APIs', 'Node.js', 'Express', 'SQL', 
         'MongoDB', 'PWA', 'React'];
 
-    const [body]= 
-    {
-        about: '',
-        contact: contactInfo,
-        projects: [links, images, titles],
-        resume: skillList
-    };
+    const [body]= useState([
+        {context: ''},
+        {context: contactInfo},
+        {context: links, images, titles},
+        {context: skillList}
+    ]);
 
+    const [usedBody, setUsedBody]= useState(body[0]);
     return(
-        <main>
+        <div>
             <h2>{capFirstLetter(currentOption.name)}</h2>
             <p>{currentOption.subtitle}</p>
             <br /> <br />
 
             <p>{currentOption.mainText}</p>
-            
+            <br />
                 
-           
-        </main>
+            
+        </div>
     );
 }
 
 export default FullNav;
 /**
  *  <ul>
-                <li>
-                    {body.currentOption.name}
-                </li>
-    </ul>
+                {body.map((option) => 
+                (
+                    <li>{option.context}</li>
+                ))}
+            </ul>
  */

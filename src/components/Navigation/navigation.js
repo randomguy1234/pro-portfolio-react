@@ -1,10 +1,10 @@
 import React from 'react';
 import {capFirstLetter} from '../../utils/helpers';
-/*import About from './about';
+import About from './about';
 import Contact from './contact';
 import Project from '../Project/project';
-import Resume from './resume';*/
-import FullNav from './fullNav';
+import Resume from './resume';
+//import FullNav from './fullNav';
 
 function Navigation(props)
 {
@@ -27,9 +27,10 @@ function Navigation(props)
                 ))}
             </nav>
             <main>
-              <FullNav 
-              currentOption= {currentOption}
-              ></FullNav>      
+                    <About currentOption= {currentOption}></About>
+                    <Contact currentOption= {currentOption}></Contact>
+                    <Project currentOption= {currentOption}></Project>
+                    <Resume currentOption= {currentOption}></Resume>     
                     
             </main>
         </div>
