@@ -1,19 +1,18 @@
 import React from 'react';
 import {capFirstLetter} from '../../utils/helpers';
-import About from './about';
+/*import About from './about';
 import Contact from './contact';
 import Project from '../Project/project';
-import Resume from './resume';
-
+import Resume from './resume';*/
+import FullNav from './fullNav';
 
 function Navigation(props)
 {
+    
     const {
         navOptions= [],
         setCurrectOption, currentOption,
     } = props;
-
-    
 
     return (
         <div>
@@ -28,22 +27,9 @@ function Navigation(props)
                 ))}
             </nav>
             <main>
-                    <About 
-                        currentOption= {currentOption}
-                        ></About>
-                    
-                    <Contact
-                    currentOption= {currentOption}
-                        ></Contact>
-                    
-                    <Project
-                    currentOption= {currentOption}
-                        ></Project>
-
-                    <Resume
-                    currentOption= {currentOption}
-                        ></Resume>
-
+              <FullNav 
+              currentOption= {currentOption}
+              ></FullNav>      
                     
             </main>
         </div>

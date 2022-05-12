@@ -7,7 +7,7 @@ import sportStore from '../../assets/images/AllStarSportingGoods-screenshot.png'
 
 function Project(props)
 {
-    const mainText=['Below is a list of my deployed projects as well as a screenshot of each project.']
+    const mainText= 'Below is a list of my deployed projects as well as a screenshot of each project.';
 
     //arrays for deployed projects
     const links= [
@@ -18,7 +18,7 @@ function Project(props)
 
     const images= [website, generator, dictionary, sportStore];
 
-    const titles= ['Run Buddy', 'Password Generator', 'Word Facts', 'AllStar Sporting Goods']
+    const titles= ['Run Buddy', 'Password Generator', 'Word Facts', 'AllStar Sporting Goods'];
 
     const {currentOption}= props;
     return (
