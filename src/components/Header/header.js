@@ -11,13 +11,17 @@ function Header()
         +' beginning of college and I was exposed to programming for the' 
         +' first time in my life. Now I have a degree in computer science and' 
         +' have acquired some experience with various technologies. I am excited'
-        +' about what software I will build next.'},
+        +' about what software I will build next.',
+            reference: 0},
         {name: 'contact', subtitle: 'Below is my contact information.',
-            mainText: 'If you need to contact me for any reason, please use any of the info below (or use my github/linkedin).'},
+            mainText: 'If you need to contact me for any reason, please use any of the info below (or use my github/linkedin).',
+            reference: 1},
         {name: 'portfolio', subtitle: 'Welcome to my project collection.', 
-            mainText: 'Below is a list of my deployed projects as well as a screenshot of each project.'},
+            mainText: 'Below is a list of my deployed projects as well as a screenshot of each project.',
+            reference: 2},
         {name: 'resume', subtitle: 'Are you interested in my skillset?', 
-            mainText: 'Here is a list of some of the technologies that I have used before.'}
+            mainText: 'Here is a list of some of the technologies that I have used before.',
+            reference: 3}
     ]);
 
 

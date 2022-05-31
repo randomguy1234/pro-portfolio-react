@@ -5,7 +5,7 @@ function Contact(props)
 {
 
   const contactInfo= ['email address: michael.brown.pgrad@gmail.com '
-  ,'phone number: 914-309-0594 ']
+  ,'phone number: 914-309-0594 '];
   const mainText= 'If you need to contact me for any reason, please use any of the info below (or use my github/linkedin).';
   
   const {currentOption}= props;
